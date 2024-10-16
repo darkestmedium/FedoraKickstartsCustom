@@ -16,6 +16,7 @@ cmake
 vulkan-tools
 vulkan-loader-devel
 vulkan-validation-layers-devel
+glslang
 
 # Other
 code
