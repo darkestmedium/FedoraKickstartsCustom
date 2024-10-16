@@ -1,0 +1,9 @@
+# Directories
+Cache
+Temp
+Build
+
+# Kickstarts
+*.kstmp.*
+
+*.iso
