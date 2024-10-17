@@ -19,13 +19,14 @@ timezone Europe/Warsaw
 #
 #include snippets/packagekit-cached-metadata.ks
 
-part / --size 16384
+# Needs to be increased if more packages are added
+part / --size 7386
 
 # Repositories
 
 # network  --bootproto=dhcp --device=link --activate
 # System services
-services --enabled="NetworkManager,ModemManager,sshd"
+services --enabled="NetworkManager,ModemManager,sshd,bluetooth"
 
 
 %packages

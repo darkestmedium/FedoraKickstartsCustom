@@ -3,7 +3,6 @@ repo --name="vscode" --baseurl=https://packages.microsoft.com/yumrepos/vscode
 repo --name="github-desktop" --baseurl=https://mirror.mwt.me/shiftkey-desktop/rpm
 
 %packages
-kernel-devel
 
 # Build Essential
 git
@@ -11,6 +10,7 @@ clang
 gcc-c++
 make
 cmake
+kernel-devel
 
 # Vulkan
 vulkan-tools

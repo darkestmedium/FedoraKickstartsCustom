@@ -2,7 +2,7 @@
 
 **Wrapping repository** for the original Fedora kickstart files: [Fedora Kickstarts](https://pagure.io/fedora-kickstarts)
 
-This is a customized Fedora build based on a stripped-down GNOME Workstation release. It provides a bare minimum GNOME desktop environment with networking, Wi-Fi, some basic GNOME apps, shell extensions, and optional NVIDIA drivers (which you can easily disable).
+This is a customized Fedora build based on a stripped-down GNOME Workstation release oriented for **Game Developemt**. It provides a bare minimum GNOME desktop environment with networking, Wi-Fi, some basic GNOME apps, shell extensions, and optional NVIDIA drivers (which you can easily disable).
 
 
 ### Additional Packages Include:
@@ -10,6 +10,7 @@ This is a customized Fedora build based on a stripped-down GNOME Workstation rel
 - VS Code
 - GitHub Desktop
 - C++ Development Environment
+- Proprietary Nvidia Drivers 
 
 
 ## How to Use:
@@ -53,5 +54,7 @@ sudo dd \
   of=${input:outputFile} \
   bs=4M status=progress
 ```
+
+You can use the **Scripts/Gnome-Setup.sh** to setup your desktop after installation.
 
 And don't forget to have fun.

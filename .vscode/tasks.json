@@ -34,14 +34,24 @@
 			"group": {"kind": "build"},
 			"detail": "Creates a bootable usb drive.",
 		},
-		// // Build and Burn!
-		// {
-		// 	"label": "Build and Run",
-		// 	"dependsOrder": "sequence",
-		// 	"dependsOn": ["Build All", "Run Engine"],
-		// 	"group": {"kind": "build"},
-		// 	"detail": "Builds and runs the executables. ('Build All', 'Run Engine')",
-		// }
+		// Build and Burn!
+		{
+			"label": "Build and Burn",
+			"dependsOrder": "sequence",
+			"dependsOn": ["Build ISO", "Burn to USD Drive"],
+			"group": {"kind": "build"},
+			"detail": "Builds and burns the iso to a USB drive. ('Build ISO', 'Burn to USD Drive')",
+		},
+		// Clean Workspace
+		{
+			"label": "Clean Workspace",
+			"type": "shell",
+			"command": "sudo",
+			"options": {"cwd": "${workspaceFolder}"},
+			"args":	["rm", "-rf", "./Cache", "./Temp", "*.iso", "*.kstmp.*"],
+			"group": {"kind": "build"},
+			"detail": "Cleans the workspace.",
+		},
 	],
 
 	// Inputs

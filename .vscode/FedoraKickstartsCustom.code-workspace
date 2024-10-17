@@ -2,11 +2,7 @@
 	"folders":
 	[
 		{
-			"path": ".."
+			"path": "../"
 		}
 	],
-
-	"settings":
-	{
-	},
 }
