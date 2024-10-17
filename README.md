@@ -1,5 +1,6 @@
 # FedoraKickstartsCustom
 
+
 **Wrapping repository** for the original Fedora kickstart files: [Fedora Kickstarts](https://pagure.io/fedora-kickstarts)
 
 This is a customized Fedora build based on a stripped-down GNOME Workstation release oriented for **Game Developemt**. It provides a bare minimum GNOME desktop environment with networking, Wi-Fi, some basic GNOME apps, shell extensions, and optional NVIDIA drivers (which you can easily disable).

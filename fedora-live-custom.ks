@@ -29,6 +29,19 @@ part / --size 7386
 services --enabled="NetworkManager,ModemManager,sshd,bluetooth"
 
 
+# Bootflags
+
+# For AMD CPU's https://www.reddit.com/r/linux/comments/15p4bfs/amd_pstate_and_amd_pstate_epp_scaling_driver/
+# amd_pstate_epp - new fully autonomous power managment
+# amd_pstate=guided - somehow controllable by the user if you want to use sm like auto-cpufreq
+#                     and turn turbo boost off.
+#
+# For Nvidia drivers:
+# rd.driver.blacklist=nouveau modprobe.blacklist=nouveau - if you don't want the mesa driver
+
+bootloader --location=none --append="rd.driver.blacklist=nouveau modprobe.blacklist=nouveau"
+
+
 %packages
 gnome-initial-setup
 anaconda-webui
