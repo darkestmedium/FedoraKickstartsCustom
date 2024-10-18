@@ -4,13 +4,15 @@ repo --name="github-desktop" --baseurl=https://mirror.mwt.me/shiftkey-desktop/rp
 
 %packages
 
+kernel-devel
+kernel-headers
+
 # Build Essential
 git
 clang
 gcc-c++
 make
 cmake
-kernel-devel
 
 # Vulkan
 vulkan-tools

@@ -1,11 +1,29 @@
 # Repositories
-repo --name="rpmfusion-nonfree" --baseurl=http://download1.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/$basearch/os/
+
+repo --name="rpmfusion-nonfree-updates" --baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/$releasever/$basearch/
 
 
 %packages
 
-# NVIDIA !!!
+# Dependencies
+akmods
+
+# Drivers
 akmod-nvidia
 xorg-x11-drv-nvidia-cuda
+
+# Optional VAAPI/VDPAU Drivers 
+# nvidia-vaapi-driver
+# libva-utils
+# vdpauinfo
+
+%end
+
+
+%post
+
+akmods --force
+dracut --force
+chkconfig akmods on
 
 %end

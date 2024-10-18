@@ -20,7 +20,7 @@ timezone Europe/Warsaw
 #include snippets/packagekit-cached-metadata.ks
 
 # Needs to be increased if more packages are added
-part / --size 7386
+part / --size 8196
 
 # Repositories
 
@@ -43,12 +43,15 @@ bootloader --location=none --append="rd.driver.blacklist=nouveau modprobe.blackl
 
 
 %packages
+
 gnome-initial-setup
 anaconda-webui
+
 %end
 
 
 %post
+
 # set livesys session type
 sed -i 's/^livesys_session=.*/livesys_session="gnome"/' /etc/sysconfig/livesys
 
